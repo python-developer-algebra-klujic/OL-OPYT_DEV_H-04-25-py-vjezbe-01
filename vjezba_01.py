@@ -8,11 +8,23 @@ SAVJET: Za sada koristite zasebnu varijablu za svaki od četiri broja,
         kako je navedeno u primjeru (192.168.0.184).
 Ispis treba napraviti za sve oblike brojevnih sustava.
 '''
+# dio koji "ocisti" ekran prije ispisa - za sada zanemariti, koristi cemo kasnije
+import os
+os.system('cls')
 
-a = 192
-b = 168
-c = 0
-d = 184
+# Fiksno unesena IP adresa
+# a = 192
+# b = 168
+# c = 0
+# d = 184
+
+# Neka korisnik unese IP adresu
+# NAPOMENA: Preuzeto od Ivan Mandić
+a = int(input('Upisite prvi oktet IP adrese: '))
+b = int(input('Upisite drugi oktet IP adrese: '))
+c = int(input('Upisite treći oktet IP adrese: '))
+d = int(input('Upisite četvrti oktet IP adrese: ')) 
+
 
 binary = f'{bin(a)}.{bin(b)}.{bin(c)}.{bin(d)}'
 octal = f'{oct(a)}.{oct(b)}.{oct(c)}.{oct(d)}'
